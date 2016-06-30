@@ -2,7 +2,7 @@
   <!-- Menu -->
   <nav class="menu" id="theMenu">
     <div class="menu-wrap">
-      <h1 class="logo"><a href="index.html#home">Onassis</a></h1>
+      <h1 class="logo"><a href="index.html#home">Chat Guide</a></h1>
       <i class="icon-remove menu-close"></i>
       <a href="#home" class="smoothScroll">Home</a>
       <a href="#services" class="smoothScroll">Services</a>
@@ -15,7 +15,10 @@
       <a href="#"><i class="icon-envelope"></i></a> -->
     </div>
     <!-- Menu button -->
-    <div id="menuToggle"><i class="icon-reorder"></i></div>
+    <div id="menuToggle">
+    <!-- <i class="icon-reorder"></i> -->
+     <a href="#">log in</a>
+    </div>
   </nav>
   <!-- ========== HEADER SECTION ========== -->
   <section id="home" name="home"></section>
@@ -39,9 +42,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
-        <h3>WELCOME TO <bold>ChatGuide</bold>.<br/>
-        Ask idea for your trip to <bold>Local English speakers</bold> <br/><br/>
-        <bold>Enjoy your travel in Japan!. </bold><br/>
+        <h3>Ask  <bold>Local English speakers's ideas</bold> for your trip<br/>
         </h3>
         </div>
       </div>
@@ -49,7 +50,7 @@
   </div><!-- /w -->
 
   <!-- ========== SERVICES - GREY SECTION ========== -->
-  <section id="services" name="services"></section>
+<!--   <section id="services" name="services"></section>
   <div id="g">
     <div class="container">
       <div class="row">
@@ -76,9 +77,9 @@
           <h4>Tokyo</h4>
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
         </div>
-      </div>
-    </div><!-- /container -->
-  </div><!-- /g -->
+      </div> -->
+    <!-- </div>/container -->
+  <!-- </div>/ -->
 
   <!-- ========== CHARTS - DARK GREY SECTION ========== -->
 <!--   <div id="dg">
@@ -186,29 +187,28 @@
   <div id="g">
     <div class="container">
       <div class="row">
-        <h3>ABOUT US</h3>
-        <br>
-        <br>
+        <h3>GUIDES</h3>
         <div class="col-lg-2"></div>
         <div class="col-lg-8">
-        <p></p>
-        <br>
-        <br>
         </div>
         <div class="col-lg-2"></div>
-        <div class="col-lg-3 team">
-          <img class="img-circle" src="assets/team01.jpg" height="90" width="90">
-          <h4>Liz Stewart</h4>
-          <h5><i>Product Manager</i></h5>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-          <p>
-            <a href="index.html#"><i class="icon-facebook"></i></a>
-            <a href="index.html#"><i class="icon-twitter"></i></a>
-            <a href="index.html#"><i class="icon-envelope"></i></a>
 
-          </p>
-        </div>
-
+        <% @guides.each do |guide| %>
+          <a href="guides/<%= guide.id %>">
+          <div class="col-lg-3 team">
+            <img class="img-circle" src="<%= guide.image%>" height="90" width="90">
+            <h4><%= guide.nickname %></h4>
+            <h5><i><%= guide.title %></i></h5>
+            <p>
+              <a href="#" class="btn btn-chat">Ley's Chat</a>
+<!--               <a href="index.html#"><i class="icon-facebook"></i></a>
+              <a href="index.html#"><i class="icon-twitter"></i></a>
+              <a href="index.html#"><i class="icon-envelope"></i></a> -->
+            </p>
+          </div>
+          </a>
+        <% end %>
+<!-- 
         <div class="col-lg-3 team">
           <img class="img-circle" src="assets/team02.jpg" height="90" width="90">
           <h4>Brad Casey</h4>
@@ -246,50 +246,12 @@
             <a href="index.html#"><i class="icon-envelope"></i></a>
 
           </p>
-        </div>
+        </div> -->
       </div>
     </div><!-- /container -->
   </div><!-- /g -->
 
-  <!-- ========== FOOTER SECTION ========== -->
-  <section id="contact" name="contact"></section>
-  <div id="f">
-    <div class="container">
-      <div class="row">
-          <h3><b>CONTACT US</b></h3>
-          <br>
-          <div class="col-lg-4">
-            <h3><b>Send Us A Message:</b></h3>
-            <h3>onassis@blacktie.co</h3>
-            <br>
-          </div>
 
-          <div class="col-lg-4">
-            <h3><b>Call Us:</b></h3>
-            <h3>+55 3984-4389</h3>
-            <br>
-          </div>
-
-          <div class="col-lg-4">
-            <h3><b>We Are Social</b></h3>
-            <p>
-              <a href="index.html#"><i class="icon-facebook"></i></a>
-              <a href="index.html#"><i class="icon-twitter"></i></a>
-              <a href="index.html#"><i class="icon-envelope"></i></a>
-            </p>
-            <br>
-          </div>
-        </div>
-      </div>
-    </div><!-- /container -->
-  </div><!-- /f -->
-
-  <div id="c">
-    <div class="container">
-      <p>Created by <a href="http://www.blacktie.co">BLACKTIE.CO</a></p>
-
-    </div>
-  </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

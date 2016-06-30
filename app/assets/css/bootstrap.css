@@ -510,7 +510,7 @@ h2,
 
 h3,
 .h3 {
-  font-size: 24px;
+  font-size: 18px;
 }
 
 h4,
@@ -520,7 +520,8 @@ h4,
 
 h5,
 .h5 {
-  font-size: 14px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 h6,
@@ -6802,4 +6803,41 @@ td.visible-print {
   td.hidden-print {
     display: none !important;
   }
+}
+
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 12px 16px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+.btn {
+    border: none;
+    font-size: 11px;
+    line-height: 22px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.btn-chat {
+    color: #ffffff;
+    background-color: #93c54b;
+    border-color: transparent;
 }
